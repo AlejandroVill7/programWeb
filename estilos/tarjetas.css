@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  #eef2ff;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+}
+
+.empezar {
+    width: 420px;
+    padding: 30px 28px;
+    background: linear-gradient(135deg, #3aa0ff 0%, #2f7bff 30%, #1746d1 100%);
+    color: #ffffff;
+    border-radius: 28px;
+    position: relative;
+    }
+
+.title { font-size: 28px; font-weight:700; color:#fff; }
+.description { color:white; }
+.btn { position:absolute; right:22px; bottom:22px; }
+
+/* Diseño de la tarjeta Player */
+.reproductor { width:340px; padding:16px; background:#fff; border-radius:18px; }
+.progreso { height:6px; background:#eef3ff; border-radius:6px; }
+.progreso-linea { height:100%; background:#3b82f6; border-radius:6px; width:45%; }
