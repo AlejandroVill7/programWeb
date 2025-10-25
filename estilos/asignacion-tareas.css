@@ -1,10 +1,7 @@
-/*
-  asignacion-tareas.css
-  Propósito: estilos para la página `asignacion-tareas.html` (tabla y formulario de asignación de tareas).
-  Incluye estilos básicos para layout responsivo, inputs, botones y accesibilidad mínima.
-*/
+* {
+  box-sizing: border-box;
+}
 
-* { box-sizing: border-box; }
 body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   line-height: 1.4;
@@ -14,24 +11,86 @@ body {
 }
 
 .page-wrap {
-  display:flex; justify-content:center; align-items:flex-start; padding:24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 0;
 }
 
-table { background: #fff; border-collapse: collapse; border-radius:8px; overflow:hidden; box-shadow:0 6px 18px rgba(16,24,40,0.06); width: 760px; max-width:100%; }
-thead th { background:#2b6cb0; color:#fff; text-align:center; padding:14px 18px; font-size:18px; }
-td { padding:12px 14px; vertical-align:top; }
-select, input[type="text"], input[type="date"], textarea {
-  width:100%; padding:8px 10px; border:1px solid #d1d5db; border-radius:6px; font-size:14px; background:#fff;
+table {
+  background: #fff;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  width: 650px;
+  max-width: 100%;
 }
-textarea { min-height:100px; resize:vertical; }
 
-label { display:block; font-weight:600; font-size:12px; margin-bottom:6px; color:#334155; }
+thead th {
+  background: #2b6cb0;
+  color: #fff;
+  text-align: center;
+  padding: 14px 18px;
+  font-size: 18px;
+}
 
-button { background:#2b6cb0; color:#fff; padding:10px 14px; border-radius:8px; border:0; cursor:pointer; font-weight:600; }
-button[type="reset"] { background:#94a3b8; margin-left:8px; }
+td {
+  padding: 12px 14px;
+  vertical-align: top;
+}
 
-@media (max-width:800px){
-  table { width: 100%; }
-  td { display:block; }
-  thead th { font-size:16px; }
+select,
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #fff;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+button {
+  background: #2b6cb0;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+button[type="reset"] {
+  background: #94a3b8;
+  margin-left: 8px;
+}
+
+@media (max-width:800px) {
+  table {
+    width: 100%;
+  }
+
+  td {
+    display: block;
+  }
+
+  thead th {
+    font-size: 16px;
+  }
 }

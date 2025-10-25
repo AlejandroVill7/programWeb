@@ -5,7 +5,8 @@
     font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -13,7 +14,7 @@ html, body {
     position: fixed;
     inset: 4vh 4vw;
     background: radial-gradient(1200px 600px at 10% 20%, #cfe7ff 0%, transparent 20%),
-                linear-gradient(135deg, #7cc3ff 0%, #b9bafc 45%, #e6f0ff 100%);
+        linear-gradient(135deg, #7cc3ff 0%, #b9bafc 45%, #e6f0ff 100%);
     border-radius: 28px;
     box-shadow: 0 8px 40px rgba(15, 23, 42, 0.06);
     z-index: 0;
@@ -67,26 +68,114 @@ html, body {
     font-weight: 500;
 }
 
-.form-body { margin-top: 8px; }
-.contenedor-mail, .contenedor-password { display:flex; flex-direction:column; margin:16px 0; }
-
-label { font-size:12px; color:#111827; margin-bottom:8px; font-weight:600; }
-
-input[type="email"], input[type="password"] {
-    height: 44px; padding: 10px 14px; border-radius:10px; border:1px solid #e6e9ef; background:#fbfdff;
+.form-body {
+    margin-top: 8px;
 }
 
-input:focus { border-color:#60a5fa; box-shadow:0 4px 12px rgba(96,165,250,0.12); }
+.contenedor-mail,
+.contenedor-password {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+}
 
-.contenedor-opciones { display:flex; justify-content:space-between; align-items:center; margin:6px 0 16px 0; }
-.left-opt { display:flex; gap:8px; align-items:center; color:#374151; font-size:13px; }
-.forgot { color:#3b82f6; font-size:13px; text-decoration:none; }
+label {
+    font-size: 12px;
+    color: #111827;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
 
-.contenedor-botones { display:flex; flex-direction:column; gap:12px; margin-top:6px; }
-.btn-primary { background: linear-gradient(180deg,#5b8bff,#3b6ff8); color:white; border:none; height:44px; border-radius:10px; font-weight:600; cursor:pointer; }
-.btn-google { display:inline-flex; align-items:center; gap:10px; height:44px; border-radius:10px; border:1px solid #e6e9ef; background:#fff; cursor:pointer; }
+input[type="email"],
+input[type="password"] {
+    height: 44px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e6e9ef;
+    background: #fbfdff;
+}
 
-.contenedor-other-options { text-align:center; margin-top:16px; font-size:13px; color:#6b7280; }
-.contenedor-other-options a { color:#3b82f6; text-decoration:none; font-weight:600; }
+input:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.12);
+}
 
-@media (max-width:480px){ .page-bg{ inset:2vh 2vw; border-radius:12px; } .contenedor-form{ width:calc(100% - 36px); left:50%; transform:translate(-50%,-50%); top:50%; } .card{ padding:20px; } }
+.contenedor-opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0 16px 0;
+}
+
+.left-opt {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #374151;
+    font-size: 13px;
+}
+
+.forgot {
+    color: #3b82f6;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.btn-primary {
+    background: linear-gradient(180deg, #5b8bff, #3b6ff8);
+    color: white;
+    border: none;
+    height: 44px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-google {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #e6e9ef;
+    background: #fff;
+    cursor: pointer;
+}
+
+.contenedor-other-options {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.contenedor-other-options a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width:480px) {
+    .page-bg {
+        inset: 2vh 2vw;
+        border-radius: 12px;
+    }
+
+    .contenedor-form {
+        width: calc(100% - 36px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
