@@ -1,136 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HieuBowl Restaurant</title>
-    <link rel="stylesheet" href="estilos/rice_bowl.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
 
-    <header>
-        <div class="container">
-            <a href="#" class="logo">HIEUBOWL</a>
-            <nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HieuBowl Restaurant</title>
+    <link rel="stylesheet" href="estilos/rice_bowl.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Playfair para titulares (script y cursivas), Poppins para texto -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-wrap">
+            <a href="#" class="logo" aria-label="Ir al inicio">
+                <span class="logo-h">HIEU</span><span class="logo-b">BOWL</span>
+                <small>Vietnamese Kitchen</small>
+            </a>
+
+            <nav class="main-nav" aria-label="Menú principal">
                 <ul>
-                    <li><a href="#">Foo Noodle Soup</a></li>
-                    <li><a href="#">Rice Bowls</a></li>
-                    <li><a href="#">Salad Bowls</a></li>
-                    <li><a href="#">Sides</a></li>
-                    <li><a href="#">Beverages</a></li>
-                    <li><a href="#">Kids</a></li>
+                    <li><a href="#menu">Pho Noodle Soup</a></li>
+                    <li><a href="#menu">Rice Bowls</a></li>
+                    <li><a href="#menu">Salad Bowls</a></li>
+                    <li><a href="#menu">Sides</a></li>
+                    <li><a href="#menu">Beverages</a></li>
+                    <li><a href="#menu">Kids</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="hero">
+        <!-- HERO -->
+        <section id="hero" class="hero deco-leaves">
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1>Rice Bowl</h1>
-                    <p>Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-                    <a href="#" class="btn">VIEW OUR MENU</a>
+                    <h1><span class="script">Rice</span> <span class="thin">BOWL</span></h1>
+                    <p>Dummy text of the printing and typesetting industry. Standard since the 1500s, when an unknown
+                        printer took a galley of type.</p>
+                    <a href="#menu" class="btn pill">VIEW OUR MENU</a>
                 </div>
-                <div class="hero-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx65iZs9yXmJq_lPtypAuKUVK8ctJsk9ppkg&s" alt="Rice Bowl">
+
+                <div class="hero-plate ring ring-purple">
+                    <img src="https://images.unsplash.com/photo-1540660297243-38f2f2b1d07a?q=80&w=1000&auto=format&fit=crop"
+                        alt="Rice bowl con vegetales y palillos" loading="lazy" width="900" height="900" />
+                    <img class="chopsticks"
+                        src="https://images.unsplash.com/photo-1604908176997-431d8f24b3ac?q=80&w=800&auto=format&fit=crop"
+                        alt="" aria-hidden="true" />
                 </div>
+            </div>
+
+            <img class="mint mint-1"
+                src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=400&auto=format&fit=crop"
+                alt="" aria-hidden="true">
+            <img class="mint mint-2"
+                src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?q=80&w=400&auto=format&fit=crop"
+                alt="" aria-hidden="true">
+            <img class="leaf leaf-1"
+                src="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?q=80&w=400&auto=format&fit=crop"
+                alt="" aria-hidden="true">
+        </section>
+
+        <!-- CALORIE COUNTER -->
+        <section id="calorie-counter" class="calorie-counter">
+            <div class="container cc-wrap">
+                <p class="cc-title">WHAT SHOULD I EAT IF I AM ?</p>
+                <a href="#" class="btn-counter">
+                    <span class="icon" aria-hidden="true">⭯</span>
+                    COUNTING CALORIES
+                </a>
             </div>
         </section>
 
-        <section id="calorie-counter">
-            <p>WHAT SHOULD I EAT IF I AM ?</p>
-            <a href="#" class="btn-counter">
-                <span class="icon">⭯</span> COUNTING CALORIES
-            </a>
-        </section>
-
-        <section id="about">
+        <!-- ABOUT -->
+        <section id="about" class="about">
             <div class="container about-content">
-                <div class="about-image">
-                    <img src="https://picsum.photos/seed/quinoabowl/500/500" alt="Hien Bowl">
+                <div class="about-plate ring ring-yellow">
+                    <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?q=80&w=1000&auto=format&fit=crop"
+                        alt="Bowl saludable con quinoa y verduras" loading="lazy" width="900" height="900" />
                 </div>
+
                 <div class="about-text">
-                    <h2>ABOUT<br>hien bowl</h2>
-                    <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="#" class="btn">VIEW OUR MENU</a>
+                    <h2>ABOUT <br><span class="script purple">hien bowl</span></h2>
+                    <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Standard dummy text
+                        ever since the 1500s when an unknown printer took a galley of type.</p>
+                    <a href="#menu" class="btn pill">VIEW OUR MENU</a>
                 </div>
             </div>
         </section>
 
-        <section id="menu">
+        <!-- MENU -->
+        <section id="menu" class="menu">
             <div class="container">
                 <h2>OUR MENU</h2>
-                <p class="menu-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <img src="https://picsum.photos/seed/soup/300/300" alt="Menu Item 1">
-                        <h3>TORO HEADING HERE</h3>
-                        <p class="price">$ 24.00</p>
-                        <p class="item-description">Lorem Ipsum</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="https://picsum.photos/seed/salad/300/300" alt="Menu Item 2">
-                        <h3>TORO HEADING HERE</h3>
-                        <p class="price">$ 24.00</p>
-                        <p class="item-description">Lorem Ipsum</p>
-                    </div>
-                    <div class="menu-item">
-                        <img src="https://picsum.photos/seed/poke/300/300" alt="Menu Item 3">
-                        <h3>TORO HEADING HERE</h3>
-                        <p class="price">$ 24.00</p>
-                        <p class="item-description">Lorem Ipsum</p>
-                    </div>
+                <p class="menu-description">Lorem ipsum is simply dummy text of the printing industry. Discover our most
+                    popular combinations.</p>
+
+                <div class="menu-cards">
+                    <!-- Card 1 -->
+                    <article class="menu-card">
+                        <div class="card-plate ring ring-grey">
+                            <img src="https://images.unsplash.com/photo-1596040033229-27b093df9b49?q=80&w=900&auto=format&fit=crop"
+                                alt="Sopa de tomate con hierbas" loading="lazy" />
+                        </div>
+                        <h3>YOUR HEADING HERE</h3>
+                        <p class="price">Only <strong>$ 24.00</strong></p>
+                        <a href="#" class="buy">Buy Now</a>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="menu-card">
+                        <div class="card-plate ring ring-purple">
+                            <img src="https://images.unsplash.com/photo-1540660297243-38f2f2b1d07a?q=80&w=900&auto=format&fit=crop"
+                                alt="Arroz frito con verduras" loading="lazy" />
+                        </div>
+                        <h3>YOUR HEADING HERE</h3>
+                        <p class="price">Only <strong>$ 24.00</strong></p>
+                        <a href="#" class="buy">Buy Now</a>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="menu-card">
+                        <div class="card-plate ring ring-yellow">
+                            <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?q=80&w=900&auto=format&fit=crop"
+                                alt="Ensalada bowl con aguacate y quinoa" loading="lazy" />
+                        </div>
+                        <h3>YOUR HEADING HERE</h3>
+                        <p class="price">Only <strong>$ 24.00</strong></p>
+                        <a href="#" class="buy">Buy Now</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials">
+        <!-- TESTIMONIALS -->
+        <section id="testimonials" class="testimonials">
             <div class="container testimonials-content">
                 <div class="testimonial-quote">
-                    <blockquote>"Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</blockquote>
+                    <img class="soup-left"
+                        src="https://images.unsplash.com/photo-1528832178451-463084ef3de2?q=80&w=800&auto=format&fit=crop"
+                        alt="" aria-hidden="true" />
+                    <blockquote>
+                        “Lorem Ipsum has been the industry's standard dummy text. It has survived not only five
+                        centuries, but also the leap into electronic.”
+                    </blockquote>
                     <div class="author">
-                        <img src="https://picsum.photos/seed/person/50/50" alt="Malle Kramar" class="author-img">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+                            alt="Malte Kramer" class="author-img" />
                         <div>
-                            <cite>Malle Kramar</cite>
-                            <span>@bluepartmedia</span>
+                            <cite>Malte Kramer</cite>
+                            <span>@Luxury Presence</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="testimonial-text">
-                    <h2>Our Happy Customers</h2>
-                    <p>Lorem ipsum dolor sit amet is simply dummy text of the printing and typesetting.</p>
-                    <a href="#" class="arrow-link">→</a>
+                    <h2>Our Happy <br> Customers</h2>
+                    <p>Lorem ipsum dolor sit amet is simply dummy text of the printing and type setting industry</p>
+                    <a href="#" class="arrow-link" aria-label="Más reseñas">→</a>
                 </div>
             </div>
         </section>
 
-        <section id="cta">
+        <!-- CTA -->
+        <section id="cta" class="cta deco-ingredients">
             <div class="container cta-content">
                 <div class="cta-text">
                     <h2>Ready to get started?</h2>
                     <p>Get a guided demo Lorem ipsum dolor sit amet</p>
                 </div>
-                <form class="cta-form">
-                    <input type="email" placeholder="Email address">
-                    <button type="submit" class="btn">GET STARTED ↗</button>
+
+                <form class="cta-form" action="#" method="post">
+                    <label class="sr-only" for="email">Email address</label>
+                    <input id="email" type="email" placeholder="Email address" required />
+                    <button type="submit" class="btn pill">GET STARTED</button>
                 </form>
+
                 <div class="cta-image">
-                    <img src="https://picsum.photos/seed/ctabowl/400/400" alt="Bowl CTA">
+                    <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?q=80&w=900&auto=format&fit=crop"
+                        alt="Bowl colorido" loading="lazy" />
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
         <div class="container footer-top">
             <div class="footer-contact">
                 <a href="mailto:info@example.com">info@example.com</a>
             </div>
+
             <div class="footer-links">
                 <div>
                     <ul>
@@ -154,3 +220,21 @@
                         <li><a href="#">Lorem</a></li>
                         <li><a href="#">Ipsum</a></li>
                         <li><a href="#">Dolor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© <span id="year"></span> HieuBowl. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
