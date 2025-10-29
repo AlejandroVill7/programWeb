@@ -1,17 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap');
+/* ------------------------- */
+/* --- ESTILOS GLOBALES --- */
+/* ------------------------- */
+
+/* Importar fuentes (ya en el HTML, pero es buena práctica) */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
 
 :root {
-    --primary-color: #D9534F;
-    --dark-blue-1: #4A478A;
-    --dark-blue-2: #2E2C57; 
+    --primary-color: #D9534F; /* Rojo/Rosa de los botones */
+    --dark-blue-1: #4A478A;  /* Púrpura del menú */
+    --dark-blue-2: #2E2C57;  /* Azul oscuro del CTA */
     --text-dark: #333;
     --text-light: #fff;
+    --text-grey: #555;
+    --bg-light: #fff;
+    --bg-light-yellow: #FFF9E8; /* Círculo de fondo en 'About' */
+    --bg-grey: #f4f4f4; /* Fondo del contador de calorías */
 }
 
-header{
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    overflow-x: hidden; /* Evita scroll horizontal por elementos decorativos */
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 6rem; /* 96px aprox */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #3B396D; /* Azul/Púrpura del título */
+}
+
+h2 {
+    font-size: 3rem; /* 48px aprox */
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+    color: var(--text-grey);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Botón reutilizable */
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c9302c;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------- */
+/* --- HEADER --- */
+/* ------------------------- */
+header {
+    background: var(--bg-light);
+    padding: 25px 0;
+    border-bottom: 1px solid #eee;
 }
 
 header .container {
@@ -19,11 +96,12 @@ header .container {
     justify-content: space-between;
     align-items: center;
 }
+
 header .logo {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 24px;
-    color: var(--text-dark);
     text-decoration: none;
+    color: var(--text-dark);
 }
 
 header nav ul {
@@ -33,97 +111,27 @@ header nav ul {
     display: flex;
 }
 
-header nav ul li {
-    margin-left: 20px;
+header nav li {
+    margin-left: 30px;
 }
+
 header nav a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--text-grey);
     font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
 
-#menu {
-    background-color: var(--dark-blue-1);
-    color: white;
-    padding: 100px 0;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-    margin-top: -80px; 
-    text-align: center;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.menu-item {
-    background: #fff;
-    color: var(--text-dark);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-#cta {
-    background-color: var(--dark-blue-2);
-    color: white;
-    padding: 60px 0;
-}
-
-.cta-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.cta-text {
-    flex: 1;
-}
-
-.cta-image {
-    flex: 1;
-}
-
-.cta-image img {
-    max-width: 100%;
-}
-
-/* Formulario */
-.cta-form {
-    display: flex;
-    margin-top: 20px;
-}
-
-.cta-form input[type="email"] {
-    flex-grow: 1; /* Ocupa el espacio disponible */
-    padding: 12px;
-    border: none;
-    border-radius: 5px 0 0 5px; /* Redondeo solo a la izquierda */
-}
-
-.cta-form .btn {
-    border-radius: 0 5px 5px 0; /* Redondeo solo a la derecha */
-}
-
-.menu-item img {
-    max-width: 100%;
-    margin-bottom: 15px;
-}
-
-.menu-item .price {
-    font-size: 20px;
-    font-weight: bold;
+header nav a:hover {
     color: var(--primary-color);
 }
 
-/* Sección Hero */
+/* ------------------------- */
+/* --- SECCIÓN HERO --- */
+/* ------------------------- */
 #hero {
-    background: #fff; /* O un degradado muy sutil */
     padding: 80px 0;
-    /* La curva se podría añadir aquí con ::after */
 }
 
 .hero-content {
@@ -133,17 +141,60 @@ header nav a {
 }
 
 .hero-text {
-    flex: 1; 
+    flex: 1;
 }
 
 .hero-image {
     flex: 1;
+    text-align: center;
 }
 
 .hero-image img {
-    max-width: 100%;
+    border-radius: 50%;
+    max-width: 500px;
+    object-fit: cover;
 }
 
+
+/* ------------------------- */
+/* --- CALORIE COUNTER --- */
+/* ------------------------- */
+#calorie-counter {
+    background-color: var(--bg-grey);
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 40px 40px 0 0; /* Curva superior */
+    margin: 0 20px; /* Le da el efecto de estar "dentro" */
+    position: relative;
+    top: -30px; /* Lo sube un poco */
+}
+
+#calorie-counter p {
+    margin: 0 0 15px 0;
+    font-weight: 500;
+}
+
+.btn-counter {
+    background: var(--bg-light);
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-counter .icon {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* ------------------------- */
+/* --- SECCIÓN ABOUT --- */
+/* ------------------------- */
 #about {
     padding: 80px 0;
 }
@@ -151,65 +202,148 @@ header nav a {
 .about-content {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
 }
 
 .about-image {
     flex: 1;
+    position: relative; /* Para el círculo de fondo */
+    text-align: center;
+}
+
+/* Círculo amarillo de fondo */
+.about-image::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 100%; /* Mantiene el aspect ratio 1:1 */
+    background-color: var(--bg-light-yellow);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .about-image img {
-    max-width: 100%;
+    border-radius: 50%;
+    max-width: 450px;
+    position: relative; /* Para estar sobre el pseudo-elemento */
 }
 
 .about-text {
     flex: 1;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
+.about-text h2 {
     color: var(--text-dark);
+    line-height: 1.1;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif; 
+/* ------------------------- */
+/* --- SECCIÓN MENU --- */
+/* ------------------------- */
+#menu {
+    background-color: var(--dark-blue-1);
+    color: var(--text-light);
+    padding: 120px 0 80px 0;
+    text-align: center;
+    
+    /* La forma diagonal superior */
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -80px; /* Se traslapa con la sección 'about' */
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+#menu h2 {
+    color: var(--text-light);
 }
 
-.btn {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
+#menu .menu-description {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto 50px auto;
 }
 
-@media (max-width: 768px) {
-    /* Apilar columnas de Flex */
-    .hero-content,
-    .about-content,
-    .testimonials-content,
-    .cta-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* Apilar columnas de Grid */
-    .menu-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    header nav {
-        display: none; 
-    }
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
+
+.menu-item {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.menu-item img {
+    width: 100%;
+    max-width: 200px; /* Tamaño fijo para las imágenes */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    margin-bottom: 5px;
+}
+
+.menu-item .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.menu-item .item-description {
+    font-size: 0.9rem;
+    color: var(--text-grey);
+}
+
+/* ------------------------- */
+/* --- TESTIMONIALS --- */
+/* ------------------------- */
+#testimonials {
+    padding: 100px 0;
+}
+
+.testimonials-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.testimonial-quote {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.testimonial-quote blockquote {
+    margin: 0 0 20px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-grey);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.author cite {
+    font-
