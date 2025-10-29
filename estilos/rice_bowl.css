@@ -26,6 +26,146 @@ header .logo {
     text-decoration: none;
 }
 
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+header nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+#menu {
+    background-color: var(--dark-blue-1);
+    color: white;
+    padding: 100px 0;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -80px; 
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.menu-item {
+    background: #fff;
+    color: var(--text-dark);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#cta {
+    background-color: var(--dark-blue-2);
+    color: white;
+    padding: 60px 0;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.cta-text {
+    flex: 1;
+}
+
+.cta-image {
+    flex: 1;
+}
+
+.cta-image img {
+    max-width: 100%;
+}
+
+/* Formulario */
+.cta-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.cta-form input[type="email"] {
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0 0 5px; /* Redondeo solo a la izquierda */
+}
+
+.cta-form .btn {
+    border-radius: 0 5px 5px 0; /* Redondeo solo a la derecha */
+}
+
+.menu-item img {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.menu-item .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Sección Hero */
+#hero {
+    background: #fff; /* O un degradado muy sutil */
+    padding: 80px 0;
+    /* La curva se podría añadir aquí con ::after */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1; 
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    max-width: 100%;
+}
+
+#about {
+    padding: 80px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+}
+
+.about-text {
+    flex: 1;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -52,4 +192,24 @@ h1, h2, h3 {
     display: inline-block;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Apilar columnas de Flex */
+    .hero-content,
+    .about-content,
+    .testimonials-content,
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Apilar columnas de Grid */
+    .menu-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    header nav {
+        display: none; 
+    }
 }
